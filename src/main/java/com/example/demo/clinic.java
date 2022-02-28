@@ -7,10 +7,10 @@ public class clinic {
 	public clinic() {
 		
 	}
-	public clinic(String firstname,String surname,int phone,String mail,int age) {
+	public clinic(String firstname,String surname,String phone,String mail,int age) {
 		this.firstname=firstname;
 		this.surname=surname;
-		this.phone=phone;
+		this.phone= phone;
 		this.mail=mail;
 		this.age=age;
 	}
@@ -18,7 +18,7 @@ public class clinic {
 	private int id;
 	private String firstname;
 	private String surname;
-	private int phone;
+	private String phone;
 	private String mail;
 	private int age;
 	public int getId() {
@@ -39,10 +39,10 @@ public class clinic {
 	public void setSurname(String surname) {
 		this.surname = surname;
 	}
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	public String getMail() {
