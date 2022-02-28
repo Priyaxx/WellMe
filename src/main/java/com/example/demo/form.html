@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>Wellme appointment service</title>
+    <style>
+        .headname{
+            font-family:Arial, Helvetica, sans-serif;
+            text-align:center;
+            background-color:blue;
+            color:pink
+        }
+        .headname.padding{
+             padding-top:25px;
+             padding-bottom:25px;
+             padding-left:300px;
+             padding: right 300px;
+        }
+        .details{
+             background-color:rgb(43, 204, 43);
+             color:black;
+             text-align:center;
+        }
+        hr{
+           border:1px solid red;
+        }
+        .message{
+            background-color:cyan;
+            color:tomato
+        }
+        .reason{
+            background-color:yellow;
+            color:rgb(117, 16, 117);
+            text-align:center;
+        }
+        .grid{
+            display:grid;
+            justify-content: space-evenly;
+            grid-template-columns: 50px 50px 50px; 
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+            font-size:20px
+        }
+        .b{
+            background-color:lightblue;
+            font-size:15px;
+            color:crimson;
+            border-color: red;
+            width:100px;
+        }
+        .final{
+            background-color:orange;
+            display:grid;
+            justify-content:space-evenly;
+            grid-template-columns: 75px 75px;
+            grid-gap: 20px;
+            padding:10px;
+            font-size:20px
+        }
+        .slots{
+            background-color:palevioletred;
+            color:purple;
+            text-align:center;
+        }
+        .fil{
+            background-color:paleturquoise;
+   
+        }
+        
+         
+    </style>
+</head>
+<body>
+       <div class="headname">
+        <h1> WELL ME CLINIC :) </h1>
+    </div>
+   
+   <form class="fil">
+    
+    <div class="message">
+        <marquee>WELCOME TO WELL ME CLINIC:)--PLEASE ENTER YOUR DETAILS TO GET AN APPOINMENT</marquee>
+    </div>
+    <div class="details">
+        <hr>
+        <label for="firstname">
+            FIRSTNAME :
+        </label>
+        <input type="text" name="firstname" id="firstname" placeholder="Enter your firstname" size="20" required/>
+        <hr>
+        <label for="surname">
+            SURNAM :
+        </label>
+        <input type="text" id="surname" name="lastname" placeholder="Enter your surname" size="20" required/>
+        <hr>
+        <label for="initial">
+            INITIAL :
+        </label>
+        <input type="text" id="initial" name="initial" placeholder="initial" size="3" required/>
+        <hr>
+        <label for="gender">
+            GENDER :
+        </label>
+        <br>
+        <input type="radio" id="gender" name="gender" value="MALE" />MALE
+        <br>
+        <input type="radio" id="gender" name="gender" value="FEMALE"/>FEMALE
+        <br>
+        <input type="radio" id="gender" name="gender" value="OTHER"/>OTHER
+        <hr>
+        <label for="phone">
+            PHONE NO : 
+        </label>
+        <input type="text" id="phone" placeholder="Country Code" value="91" size="2"/>
+        <input type="text" name="phone" id="phone" placeholder="phone no" size="10" required/>
+        <hr>
+         
+    </div>
+    <div class="message">
+        <marquee>NOTE: Appointments could be booked only before 24 hours the day you want the appointment. No prior booking is allowed. Please ensure your presence
+            only on the slot you have booked.If there is any change in the slot timings our receptionist would contact you. </marquee>
+            
+    </div>
+    <div class="reason">
+        <label for="problems">PLEASE SELECT THE REASON FOR YOUR DOCTOR'S APPOINTMENT</label>
+        <br>
+        <input type="checkbox" id="problems" name="problems" value="fever or cold" checked/>
+        <label>fever or cold</label> <br>
+        <input type="checkbox" id="problems" name="problems" value="headaches or bodyaches"/>
+        <label>headaches or bodyaches</label> <br>
+        <input type="checkbox" id="problems" name="problems" value="sprain or fractures"/>
+        <label>sprain or fractures</label> <br>
+        <input type="checkbox" id="problems" name="problems" value="infections"/>
+        <label>infections</label> <br>
+        <input type="checkbox" id="problems" name="problems" value="digestion problems"/> 
+        <label>digestion problems</label> <br>
+        <input type="checkbox" id="problems" name="problems" value="others"/> 
+        <label>others</label> <br>
+    </div>
+    <div class="slots">
+        <label>
+            SELECT YOUR SLOTS:
+        </label>
+        <br>
+        <input type="radio" id="slot" name="slot" value="8AM to 11AM" onclick="changea()"/>8AM to 11AM<br>
+        <input type="radio" id="slot" name="slot" value="1PM to 4PM" onclick="changeb()"/>1PM to 4PM<br>
+        <input type="radio" id="slot" name="slot" value="6PM to 9PM" onclick="changec()"/>6PM to 9PM
+        <hr>
+        <script>
+        function changea(){
+            alert("Your slot is 8AM to 11AM");
+        }
+        function changeb(){
+            alert("Your slot is 1PM to 4PM");
+        }
+        function changec(){
+            alert("Your slot is 6PM to 9PM");
+        }
+        </script>
+
+    </div>
+    <div class="final">
+        <button class="submis" onclick="submis()">SUBMIT</button>
+        <button class="res" type="reset" onclick="res()">RESET</button>
+    <script>
+        function submis(){
+            alert("Your form has been succesfully submitted");
+        }
+        function reset(){
+            alert("Your form has been reseted");
+        }
+    </script>
+    </div>
+    </form>  
+         
+    
+</body>
+</html>
